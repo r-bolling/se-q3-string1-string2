@@ -50,7 +50,11 @@ def verbing(s):
 
 def not_bad(s):
     # your code here
-    return
+    not_index = s.find('not')
+    bad_index = s.find('bad')
+    if not_index < bad_index:
+        return s[0:not_index] + 'good' + s[bad_index + 3::]
+    return s
 
 
 # F. front_back
