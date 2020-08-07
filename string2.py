@@ -4,7 +4,7 @@ Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Robert Bolling with help from Kenzie Lessons"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -20,11 +20,19 @@ __author__ = "???"
 # instead.
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
+# TODO
+# If str length < 3, return str
+# If str length >= 3 and str ends with 'ing', add 'ly' to str and return str
+# Else, add 'ing' to str and return str
 
 
 def verbing(s):
     # your code here
-    return
+    if len(s) >= 3 and s.endswith('ing'):
+        return s + 'ly'
+    if len(s) >= 3:
+        return s + 'ing'
+    return s
 
 
 # E. not_bad
@@ -34,6 +42,10 @@ def verbing(s):
 # Return the resulting string.
 # Example:
 #   'This dinner is not that bad!' -> 'This dinner is good!'
+# TODO
+# if not is found,
+# --- if bad is found, replace all content from and including 'not' <-> 'bad', then return new string
+# else return string
 
 
 def not_bad(s):
@@ -49,6 +61,8 @@ def not_bad(s):
 #   e.g. 'abcde', the front half is 'abc', the back half 'de'.
 # Given 2 strings, a and b, return a string of the form:
 #   a-front + b-front + a-back + b-back
+# TODO
+# if length % / 2 is 0, get half of length and slice the string there
 
 
 def front_back(a, b):
