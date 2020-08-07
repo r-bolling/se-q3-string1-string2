@@ -71,16 +71,15 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 # TODO
-# Create 2 vars
-# var1 is first char in string
-# var2 is every char but first char in string
-# replace every instance of var1 in var2 with *
-# join vars back together
+# Create 1 var
+# var is * replaced string
+# Replace 1st * with original string[0] and return
 
 
 def fix_start(s):
     # your code here
-    return
+    s_replaced = s.replace(s[0], '*')
+    return s_replaced.replace('*', s[0], 1)
 
 
 # D. mix_up
