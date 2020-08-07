@@ -4,7 +4,7 @@ Kenzie assignment: String1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Robert Bolling with help from Kenzie Lessons"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -25,11 +25,20 @@ __author__ = "???"
 # Example:
 #   donuts(5) returns 'Number of donuts: 5'
 #   donuts(23) returns 'Number of donuts: many'
+# TODO
+# if count < 10, convert count into string
+# else, count = 'many'
+# add count(string) to num of donuts message
+# return
 
 
 def donuts(count):
     # your code here
-    return
+    if count < 10:
+        newCount = str(count)
+    else:
+        newCount = "many"    
+    return 'Number of donuts: ' + newCount
 
 
 # B. both_ends
@@ -39,6 +48,10 @@ def donuts(count):
 # an empty string instead.
 # Example:
 #   'spring' -> 'spng'
+# TODO
+# If str length < 2, return ''?
+# Slice first 2 and last 2 chars from str, then add them into new variable
+# return var
 
 
 def both_ends(s):
@@ -55,6 +68,12 @@ def both_ends(s):
 # Assume that the string is length 1 or more.
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
+# TODO
+# Create 2 vars
+# var1 is first char in string
+# var2 is every char but first char in string
+# replace every instance of var1 in var2 with *
+# join vars back together
 
 
 def fix_start(s):
@@ -70,6 +89,13 @@ def fix_start(s):
 #   'mix', 'pod' -> 'pox mid'
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
+# TODO
+# create 2 vars, var1 and var2
+# add first 2 chars of b to var 1
+# add every char but first 2 of a to var 1
+# add first 2 chars of a to var 2
+# add every char but first 2 of b to var 2
+# return var1 + ' ' + var2
 
 
 def mix_up(a, b):
