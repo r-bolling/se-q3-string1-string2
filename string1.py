@@ -37,7 +37,7 @@ def donuts(count):
     if count < 10:
         newCount = str(count)
     else:
-        newCount = "many"    
+        newCount = "many"
     return 'Number of donuts: ' + newCount
 
 
@@ -101,7 +101,9 @@ def fix_start(s):
 
 def mix_up(a, b):
     # your code here
-    return
+    a_string = b[0:2] + a[2::]
+    b_string = a[0:2] + b[2::]
+    return a_string + ' ' + b_string
 
 
 # Provided simple test() function used in main() to print
