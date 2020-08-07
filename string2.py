@@ -44,7 +44,8 @@ def verbing(s):
 #   'This dinner is not that bad!' -> 'This dinner is good!'
 # TODO
 # if not is found,
-# --- if bad is found, replace all content from and including 'not' <-> 'bad', then return new string
+# --- if bad is found, replace all content from and including 'not' <-> 'bad'
+# return new string
 # else return string
 
 
@@ -71,7 +72,15 @@ def not_bad(s):
 
 def front_back(a, b):
     # your code here
-    return
+    if len(a) % 2 == 0:
+        a_half = len(a) // 2
+    elif len(a) % 2 == 1:
+        a_half = len(a) // 2 + 1
+    if len(b) % 2 == 0:
+        b_half = len(b) // 2
+    elif len(b) % 2 == 1:
+        b_half = len(b) // 2 + 1
+    return a[0:a_half] + b[0:b_half] + a[a_half::] + b[b_half::]
 
 
 # Provided simple test() function used in main() to print
