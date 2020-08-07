@@ -4,7 +4,7 @@ Kenzie assignment: String1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Robert Bolling with help from Kenzie Lessons"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -25,11 +25,20 @@ __author__ = "???"
 # Example:
 #   donuts(5) returns 'Number of donuts: 5'
 #   donuts(23) returns 'Number of donuts: many'
+# TODO
+# if count < 10, convert count into string
+# else, count = 'many'
+# add count(string) to num of donuts message
+# return
 
 
 def donuts(count):
     # your code here
-    return
+    if count < 10:
+        newCount = str(count)
+    else:
+        newCount = "many"
+    return 'Number of donuts: ' + newCount
 
 
 # B. both_ends
@@ -39,11 +48,17 @@ def donuts(count):
 # an empty string instead.
 # Example:
 #   'spring' -> 'spng'
+# TODO
+# If str length < 2, return ''?
+# Slice first 2 and last 2 chars from str, then add them into new variable
+# return var
 
 
 def both_ends(s):
     # your code here
-    return
+    if len(s) < 2:
+        return ''
+    return s[0:2] + s[-2::]
 
 
 # C. fix_start
@@ -55,11 +70,16 @@ def both_ends(s):
 # Assume that the string is length 1 or more.
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
+# TODO
+# Create 1 var
+# var is * replaced string
+# Replace 1st * with original string[0] and return
 
 
 def fix_start(s):
     # your code here
-    return
+    s_replaced = s.replace(s[0], '*')
+    return s_replaced.replace('*', s[0], 1)
 
 
 # D. mix_up
@@ -70,11 +90,20 @@ def fix_start(s):
 #   'mix', 'pod' -> 'pox mid'
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
+# TODO
+# create 2 vars, var1 and var2
+# add first 2 chars of b to var 1
+# add every char but first 2 of a to var 1
+# add first 2 chars of a to var 2
+# add every char but first 2 of b to var 2
+# return var1 + ' ' + var2
 
 
 def mix_up(a, b):
     # your code here
-    return
+    a_string = b[0:2] + a[2::]
+    b_string = a[0:2] + b[2::]
+    return a_string + ' ' + b_string
 
 
 # Provided simple test() function used in main() to print
